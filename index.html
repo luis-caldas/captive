@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="copyright" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- Information -->
+        <meta name="description" content="Authentication">
+        <meta name="author" content="Caldas">
+        <meta name="theme-color" content="#343434">
+
+        <!-- Title -->
+        <title>AUTHENTICATE</title>
+
+        <!-- Zone Information -->
+        <script src="js/zone.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/signin.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="js/jquery-1.11.2.min.js"></script>
+
+        <!-- Login -->
+        <script src="js/login.js"></script>
+    </head>
+    <body>
+        <main class="page-content col-sm-6 col-sm-push-3">
+          <!-- Login - Username & Password -->
+          <div id="login_password" class="hidden">
+              <form class="form-signin">
+                  <h2 class="form-signin-heading">Authenticate</h2>
+                  <label for="inputUsername" class="sr-only">Username</label>
+                  <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus autocomplete="none" autocapitalize="none" autocorrect="off">
+                  <label for="inputPassword" class="sr-only">Password</label>
+                  <input type="password" autocomplete="new-password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <button class="btn btn-primary btn-block" id="signin" type="button">Sign in</button>
+              </form>
+          </div>
+          <!-- Login - Empty -->
+          <div id="login_none" class="hidden">
+            <form class="form-signin">
+                <button class="btn btn-primary btn-block" id="signin_anon" type="button">Sign in</button>
+            </form>
+          </div>
+          <!-- Logout -->
+          <div id="logout_frm" class="hidden">
+            <form class="form-signin">
+                <button class="btn btn-primary btn-block" id="logoff" type="button">Logout</button>
+            </form>
+          </div>
+          <!-- Dialog -->
+          <div class="alert alert-danger alert-dismissible hidden" role="alert" id="alertMSG">
+              <button type="button" class="close" id="btnCloseError" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <span id="errorMSGtext"></span>
+          </div>
+        </main>
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

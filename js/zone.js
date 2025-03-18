@@ -1,1 +1,0 @@
-var zoneid = 0;

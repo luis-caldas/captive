@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
     <head>
-
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,47 +24,56 @@
         <script src="js/zone.js"></script>
 
         <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/signin.css" rel="stylesheet">
+        <link href="assets/styles/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/styles/signin.css" rel="stylesheet">
+
         <!-- JQuery -->
-        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="assets/scripts/jquery-3.7.1.min.js"></script>
 
         <!-- Login -->
-        <script src="js/login.js"></script>
+        <script src="assets/scripts/login.js"></script>
     </head>
-    <body>
-        <main class="page-content col-sm-6 col-sm-push-3">
-          <!-- Login - Username & Password -->
-          <div id="login_password" class="hidden">
-              <form class="form-signin">
-                  <h2 class="form-signin-heading">Authenticate</h2>
-                  <label for="inputUsername" class="sr-only">Username</label>
-                  <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus autocomplete="none" autocapitalize="none" autocorrect="off">
-                  <label for="inputPassword" class="sr-only">Password</label>
-                  <input type="password" autocomplete="new-password" id="inputPassword" class="form-control" placeholder="Password" required>
-                  <button class="btn btn-primary btn-block" id="signin" type="button">Sign in</button>
-              </form>
-          </div>
-          <!-- Login - Empty -->
-          <div id="login_none" class="hidden">
-            <form class="form-signin">
-                <button class="btn btn-primary btn-block" id="signin_anon" type="button">Sign in</button>
-            </form>
-          </div>
-          <!-- Logout -->
-          <div id="logout_frm" class="hidden">
-            <form class="form-signin">
-                <button class="btn btn-primary btn-block" id="logoff" type="button">Logout</button>
-            </form>
-          </div>
-          <!-- Dialog -->
-          <div class="alert alert-danger alert-dismissible hidden" role="alert" id="alertMSG">
-              <button type="button" class="close" id="btnCloseError" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <span id="errorMSGtext"></span>
-          </div>
+    <body class="d-flex align-items-center justify-content-center">
+        <main class="d-flex flex-column align-items-center text-white mb-5 pb-5">
+            <!-- Login - Username & Password -->
+            <div id="login_password" class="d-none d-grid">
+                <form class="form-signin">
+                    <h2 class="form-signin-heading">AUTHENTICATE</h2>
+                    <input type="text" id="inputUsername" class="form-control" placeholder="USERNAME" required autofocus autocomplete="none" autocapitalize="none" autocorrect="off">
+                    <input type="password" autocomplete="new-password" id="inputPassword" class="form-control" placeholder="PASSWORD" required>
+                    <button class="btn btn-wide btn-secondary btn-block" id="signin" type="button">SIGN IN</button>
+                </form>
+            </div>
+            <!-- Login - Empty -->
+            <div id="login_none" class="d-none d-grid">
+                <form class="form-signin">
+                    <button class="btn btn-wide btn-secondary btn-block" id="signin_anon" type="button">SIGN IN</button>
+                </form>
+            </div>
+            <!-- Logout -->
+            <div id="logout_frm" class="d-none d-grid">
+                <form class="form-signin">
+                    <button class="btn btn-wide btn-secondary btn-block" id="logoff" type="button">LOGOUT</button>
+                </form>
+            </div>
+            <!-- Spinner -->
+            <div class="spinner-grow invisible" id="spinn" role="status"></div>
+            <!-- Dialog -->
+            <div class="modal fade text-black show d-none" id="alertMSG" tabindex="-1" style="padding-right: 15px; display: block;" aria-modal="true" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" id="btnCloseError" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center my-5 py-5" id="errorMSGtext"></div>
+                        <div class="modal-footer">
+                            <button type="button" id="btnUnderstood" class="btn btn-tertiary btn-block">UNDERSTOOD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
-
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="assets/scripts/bootstrap.bundle.min.js"></script>
     </body>
 </html>
